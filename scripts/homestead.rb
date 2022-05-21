@@ -16,7 +16,8 @@ class Homestead
     end
 
     # Configure The Box
-    config.vm.define settings['name'] ||= 'homestead'
+    # config.vm.define settings['name'] ||= 'homestead'
+    config.vm.define settings['name'] ||= 'homestead02'
     config.vm.box = settings['box'] ||= 'laravel/homestead'
     unless settings.has_key?('SpeakFriendAndEnter')
       config.vm.box_version = settings['version'] ||= '>= 12.0.0, < 13.0.0'
